@@ -18,6 +18,7 @@ p {
     font-family: 'M PLUS Code Latin';
     font-size: 36px
   }
+  h2:hover{background-color: #FFF;}
 .layout-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
 .layout-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
 .home-layout-left{position:absolute;top:35%;left:10%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
@@ -54,4 +55,33 @@ div.sticky{
   top: 0;
   padding: 3px;
   background-color: #e65d2f;
+}
+.callout {
+  position: fixed;
+  bottom: 35%;
+  top: 35%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+.callout-container {
+  padding: 50px;
+  background-color:rgb(255, 255, 255, 0.9);
+  color:#000000;
+  font-family: 'M PLUS Code Latin';
+  font-size: 24px;
+  text-align: center;
+  border-radius: 12px;
+}
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.closebtn:hover {
+  color:#e65d2f;
 }
