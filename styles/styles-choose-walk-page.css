@@ -46,27 +46,194 @@ h2:hover{background-color: #FFF;}
 * {
   box-sizing: border-box;
 }
-.main {
-  float: left;
-  width: 60%;
+.grid-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10vb 30vb 30vb 30vb;
+  overflow: scroll;
+  max-height: 100%;
+}
+.grid-sticky {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.walk-name {
   text-align: center;
   padding:0px;
   margin-top:130px;
   line-height: 3px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  overflow-x: scroll;
+}
+.walk-info {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding:0px;
+  line-height: 80px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  color: rgb(255, 255, 255);
+  font-family: 'M PLUS Code Latin';
+  font-size: 36px
+}
+.walk-button {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding:0px;
+  line-height: 3px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
 }
 .map {
-    float: left;
-    width: 40%;
     text-align:right;
     padding:auto;
-    margin-top:80px;
+    margin-top:auto;
+    margin-bottom: auto;
     object-fit:cover;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
   }
 @media only screen and (max-width: 1000px) {
-    .map, .main {
-      width: 100%;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10vb 15vb 50vb 15vb;
+    overflow: scroll;
+    max-height: 100%;
+  }
+  .grid-sticky {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .walk-name {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 0%;
+  }
+  .walk-info {
+    text-align: left;
+    padding:0px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20%;
+    line-height: 80px;
+    color: rgb(255, 255, 255);
+    font-family: 'M PLUS Code Latin';
+    font-size: 36px
+  }
+  .walk-button {
+    text-align: center;
+    padding:0px;
+    line-height: 3px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    vertical-align: baseline;
+  }
+  .map {
+      text-align:right;
+      padding:auto;
+      object-fit:fill;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      margin-top: auto;
+      margin-bottom: auto;
+  
     }
   }
+  @media only screen and (max-width: 700px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 100fr;
+      grid-template-rows: 10vb 15vb 30vb 25vb 20vb;
+      overflow: scroll;
+      max-height: 100%;
+    }
+    .grid-sticky {
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .walk-name {
+      text-align: center;
+      grid-column: 1;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      margin-top: 0%;
+      white-space: nowrap;
+      overflow: scroll;
+      display: inline-block;
+    }
+    .walk-info {
+      text-align:center;
+      margin-left: auto;
+      margin-right: auto;
+      padding:0px;
+      grid-column: 1;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      margin-top: auto;
+      margin-bottom: auto;
+      vertical-align: baseline;
+      color: rgb(255, 255, 255);
+      font-family: 'M PLUS Code Latin';
+      font-size: 25px;
+      line-height: 40px;
+
+    }
+    .walk-button {
+      text-align: center;
+      padding:0px;
+      grid-column: 1;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+    .map {
+        text-align:center;
+        align-items: center;
+        padding:auto;
+        grid-column: 1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        overflow: scroll;
+        max-height: 100%;
+      }
+      h2 {
+        color:#d76740;
+        font-family: 'M PLUS Code Latin';
+        font-size: 25px;
+        background-color: #ecdb9f;
+        display: inline-block;
+        padding: 25px;
+        cursor: pointer;
+        border-radius: 12px;
+      }
+    }  
   div.sticky{
     position: -webkit-sticky;
     position: sticky;

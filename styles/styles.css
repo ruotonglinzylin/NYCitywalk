@@ -36,14 +36,14 @@ p {
   text-align: center;
 }
 .queens-block {
-  position: absolute;
+  position:fixed;
   top: 60%;
   left:20%;
   transform: translate(-20%, -60%);
   line-height: 3px;
 }
 .manhattan-block {
-  position: absolute;
+  position:fixed;
   top: 60%;
   left:8%;
   transform: translate(-8%, -60%);
@@ -72,6 +72,24 @@ div.sticky{
   text-align: center;
   border-radius: 12px;
 }
+@media only screen and (max-width: 920px) {
+  .callout {
+    position:fixed;
+    bottom: 35%;
+    top: 35%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .callout-container {
+    padding: 50px;
+    background-color:rgb(255, 255, 255, 0.9);
+    color:#000000;
+    font-family: 'M PLUS Code Latin';
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+  }
+}
 .closebtn {
   margin-left: 15px;
   color: black;
@@ -84,4 +102,48 @@ div.sticky{
 }
 .closebtn:hover {
   color:#e65d2f;
+}
+.grid-map {
+  display: grid;
+  grid-template-columns:100%;
+  grid-template-rows:100vb;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+.map {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+@media only screen and (max-width: 920px) {
+  .queens-block {
+    position:fixed;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -60%);
+    line-height: 3px;
+  }
+  .manhattan-block {
+    position:fixed;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -60%);
+    line-height: 3px;
+  }
+  h2 {
+    color:#d76740;
+    font-family: 'M PLUS Code Latin';
+    font-size: 30px;
+    background-color: #ecdb9f;
+    display: inline-block;
+    padding: 25px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
 }

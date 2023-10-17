@@ -13,7 +13,16 @@
 </head>
   <body>
     <div class="block-map">
-        <img src="img/queens-only.png" alt="Queens Block" style="height:max-content;width: auto;margin-top:3%;">
+        <div class="grid-container">
+            <div class="map">
+                <picture>
+                    <source srcset="img/queens-vertical.png" media="(max-width: 920px)">
+                    <source srcset="img/queens-only.png" media="(max-width: 2000px)">
+                    <source srcset="queens-only.png">
+                    <img src="img/queens-only.png" alt="Queens Block" style="height: 849px;;display:flex;margin-left: auto;margin-right: auto;overflow: scroll;">
+                </picture>
+            </div>
+        </div>
         <div class="queens-block">
             <h1>Queens</h1>
             <p><img src="img/location.png" alt="Location" style="float:inline-start;width:42px;height:42px;margin-inline-end:30px;">2 routes</p>
