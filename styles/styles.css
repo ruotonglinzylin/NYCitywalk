@@ -7,7 +7,7 @@ h2 {
     color:#d76740;
     font-family: 'M PLUS Code Latin';
     font-size: 36px;
-    background-color: #ecdb9f;
+    background-color: black;
     display: inline-block;
     padding: 25px;
     cursor: pointer;
@@ -18,13 +18,12 @@ p {
     font-family: 'M PLUS Code Latin';
     font-size: 36px
   }
-  h2:hover{background-color: #FFF;}
+  h2:hover{background-color:#ecdb9f;}
 .layout-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
 .layout-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
 .home-layout-left{position:absolute;top:35%;left:10%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
 .queens-layout-left{position:absolute;top:50%;left:13%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
 .full-map-button-layout{position:absolute;top:40%;left:15%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
-.text-center{text-align:center}
 .location-intro{text-align: left;line-height: 5px;}
 .text-black{color:#000000}
 .button-text:hover{color: #ffffff;text-decoration:none;display:flex;cursor: pointer;border-radius: 12px;}:link{color: #d76740;text-decoration: none;}:visited{color: #d76740;text-decoration: none;}
@@ -147,3 +146,49 @@ div.sticky{
     border-radius: 12px;
   }
 }
+.grid-home {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 38vb 24vb 38vb;
+  overflow: scroll;
+  max-height: 100%;
+}
+.background-img {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  overflow:hidden;
+}
+.home-title {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  overflow:hidden;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  display: flex;
+}
+.arc {
+  text-align:center;
+  color:  rgb(0, 0, 0);
+  font-family:"Koulen";
+  font-size: 250px;
+  display:inline;
+  margin-top: -7%;
+}
+.home-title:hover .arc {
+  display: none;
+}
+.enter {
+  display: none;
+}
+.home-title:hover .enter{
+  font-size: 200px;
+  color:white;
+  font-family:"Koulen";
+  display:inline;
+  margin-top: -4%; 
+}:link{color:white;text-decoration: none;}:visited{color:white;text-decoration: none;}
