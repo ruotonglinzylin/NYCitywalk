@@ -48,6 +48,13 @@ p {
   transform: translate(-8%, -60%);
   line-height: 3px;
 }
+.brooklyn-block {
+  position:fixed;
+  top: 60%;
+  left:8%;
+  transform: translate(-8%, -60%);
+  line-height: 3px;
+}
 div.sticky{
   position: -webkit-sticky;
   position: sticky;
