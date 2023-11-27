@@ -55,6 +55,13 @@ p {
   transform: translate(-8%, -60%);
   line-height: 3px;
 }
+.SI-block {
+  position:fixed;
+  top: 40%;
+  left:60%;
+  transform: translate(-60%, -40%);
+  line-height: 3px;
+}
 div.sticky{
   position: -webkit-sticky;
   position: sticky;
