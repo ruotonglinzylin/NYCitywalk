@@ -11,10 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"></script>
 </head>
   <body>
-    <div id="canvas-test">
     <div class="profile-place">
-        <a href="entry-?-profile.html">
-        <img src="img/noun-profile-1052547.png" alt="My Profile" style="width:42px;height:42px;">
+      <a href="entry-q&a.html">
+        <img src="img/question.png" alt="Q&A" style="width:42px;height:42px;">
         </a>
     </div>
     <div class="home-place">
@@ -26,52 +25,18 @@
         <span class="closebtn" onclick="this.parentElement.style.display='none';" style="margin: 10px;">&times;</span> 
         <div class="callout-container">Choose a block on the map to start your journey :] !</div>
     </div>
+    <div id="canvas-test">
     <div class="grid-container">
         <div class="map" id="canvas-test">
-            <img src="img/block-map.png" usemap="#image-map" style="height: 100%;display:flex;margin-left: auto;margin-right: auto;">
+          <img src="img/block-map.png" usemap="#image-map" style="height: 100%;display:flex;margin-left: auto;margin-right: auto;">
             <map name="image-map">
                 <area target="_self" alt="Queens" title="Queens" href="entry-1-3queens.html" coords="904,242,797,236,760,264,707,250,658,286,632,340,673,368,693,412,726,445,762,441,783,466,799,532,809,575,799,624,748,672,669,685,651,722,682,735,813,707,959,652,982,629,1036,361,1013,280" shape="poly">  
                 <area target="_self" alt="Manhattan" title="Manhattan" href="entry-1-3manhattan.html" coords="685,73,701,94,679,144,675,189,684,225,662,258,647,295,634,319,615,338,613,360,598,391,578,416,553,430,538,420,541,338,572,235,633,132" shape="poly">
                 <area target="_self" alt="Brooklyn" title="Brooklyn" href="entry-1-3brooklyn.html" coords="633,349,655,363,679,377,688,411,710,424,726,453,763,445,777,473,772,507,786,521,772,549,806,551,800,588,791,630,773,659,724,674,658,689,595,691,548,680,540,634,514,615,512,556,540,517,549,488,540,473,563,452,572,429,589,420,610,416" shape="poly">
                 <area target="_self" alt="Staten Island" title="Staten Island" href="entry-1-3statenisland.html" coords="459,528,464,581,495,624,450,688,426,721,392,763,308,800,230,836,191,830,186,798,199,783,191,744,195,713,251,680,258,651,264,603,262,564,287,529,341,540,396,530" shape="poly">
             </map>
-            </map>
         </div>
     </div>
   </div>
   </body>
 </html>
-<script>
-  let x = 100,
-  y = 100,
-  angle1 = 0.0,
-  segLength = 25;
-
-function setup() {
-  let myCanvas = createCanvas(displayWidth, displayHeight);
-  myCanvas.parentElement("canvas-test");
-  strokeWeight(20.0);
-  stroke(255, 100);
-}
-
-function draw() {
-  clear();
-  dx = mouseX - x;
-  dy = mouseY - y;
-  angle1 = atan2(dy, dx);
-  x = mouseX - cos(angle1) * segLength;
-  y = mouseY - sin(angle1) * segLength;
-
-  segment(x, y, angle1);
-  ellipse(x, y, 20, 20);
-}
-
-function segment(x, y, a) {
-  push();
-  translate(x, y);
-  rotate(a);
-  line(0, 0, segLength, 0);
-  pop();
-}
-
-</script>

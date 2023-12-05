@@ -74,6 +74,8 @@ h2:hover{background-color: #FFF;}
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 20%;
+  margin-right: 20%;
   padding:0px;
   line-height: 80px;
   grid-column-start: 1;

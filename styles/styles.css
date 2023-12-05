@@ -39,28 +39,28 @@ p {
   top: 60%;
   left:20%;
   transform: translate(-20%, -60%);
-  line-height: 3px;
+  line-height: 30px;
 }
 .manhattan-block {
   position:fixed;
   top: 60%;
   left:8%;
   transform: translate(-8%, -60%);
-  line-height: 3px;
+  line-height: 30px;
 }
 .brooklyn-block {
   position:fixed;
   top: 60%;
   left:8%;
   transform: translate(-8%, -60%);
-  line-height: 3px;
+  line-height: 30px;
 }
 .SI-block {
   position:fixed;
   top: 40%;
   left:60%;
   transform: translate(-60%, -40%);
-  line-height: 3px;
+  line-height: 30px;
 }
 div.sticky{
   position: -webkit-sticky;
@@ -122,6 +122,8 @@ div.sticky{
   grid-template-rows:100vb;
   overflow-y: scroll;
   overflow-x: scroll;
+  z-index: -1;
+
 }
 .map {
   grid-column-start: 1;

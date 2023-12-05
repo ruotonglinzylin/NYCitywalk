@@ -50,6 +50,7 @@ button {
     background-color: #fffd53;
     width: 70px;
     height: 70px;
+    font-family: 'M PLUS Code Latin';
 }
 button:hover{background-color: #FFF;}
 .layout-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
@@ -331,4 +332,26 @@ div.sticky{
     padding: 5px;
   }
   .close:hover{color:#e65d2f;}
+}
+.star { 
+  font-size: 5vh; 
+} 
+.one { 
+  color: #e65d2f; 
+} 
+
+.two { 
+  color: #e65d2f; 
+} 
+
+.three { 
+  color: #e65d2f; 
+} 
+
+.four { 
+  color: #e65d2f; 
+} 
+
+.five { 
+  color: #e65d2f; 
 }

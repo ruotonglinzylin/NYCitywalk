@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles-q&a.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=M PLUS Code Latin' rel='stylesheet'>
+    <title>Q&A</title>
+    <style>
+        body{background-image: url("img/pexels-urpina-art's-9177400.gif");background-size: cover;}
+    </style>    
+</head>
+<body>
+    <div class="home-place">
+        <a href="entry-1-1home.html">
+        <img src="img/home.png" alt="Home" style="width:42px;height:42px;">
+        </a>
+    </div>
+    <div class="grid-qa">
+        <div class="big-title">
+            <h1 style="text-align: center; align-items: center;">I would like to...</h1>
+        </div>
+        <div class="qa-button">
+            <button id="qaBtn1">Report a Problem</button>
+            <br>
+            <br>
+            <button id="qaBtn2">Suggest a Walk</button>
+            <br>
+            <br>
+            <button id="qaBtn3">Contact Author</button>
+        </div>
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+            <div class="grid-container">
+                <span class="close" id="close1">&times;</span>
+                <div class="popup-title">
+                    <h5 style="line-height: 64px; margin-top: 5%; text-align: center;">Report a Problem</h5>
+                </div>
+                <div class="popup-form">
+                    <form action="" id="problemForm">
+                        <h6 style="line-height: 0px; margin-top: 5%; margin-bottom: 5%;">My Name, My Contact Email:</h6>
+                        <input type="person" id="person" class="form-control" placeholder="Enter your name and contact email..." style="width: 98%;height: 50px;">
+                        <h6 style="line-height: 0px; margin-top: 5%; margin-bottom: 5%;">My Problem:</h6>
+                        <input type="problem" id="problem" class="form-control" placeholder="Discribe the problem..." style="width: 98%;height: 130px;">
+                        <button type="submit" style="color:white; background-color: black;border-radius: 5%; border: black; width: 98%; height: 40px; margin-top: 3%;">Submit</button>
+                      </form>
+                </div>
+            </div>
+            </div>
+        </div>    
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+            <div class="grid-container">
+                <span class="close" id="close2">&times;</span>
+                <div class="popup-title">
+                    <h5 style="line-height: 64px; margin-top: 5%; text-align: center;">Suggest a Walk</h5>
+                </div>
+                <div class="popup-form">
+                    <form action="" id="suggestForm">
+                        <h6 style="line-height: 0px; margin-top: 5%; margin-bottom: 5%;">My Name, My Contact Email:</h6>
+                        <input type="person" id="person" class="form-control" placeholder="Enter your name and contact email..." style="width: 98%;height: 30px;">
+                        <h6 style="line-height: 0px; margin-top: 5%; margin-bottom: 5%;">Location of Walk:</h6>
+                        <input type="location" id="location" class="form-control" placeholder="ie. Court Sq.-Queens Plaza, Long Island City, New York." style="width: 98%;height: 50px;">
+                        <h6 style="line-height: 0px; margin-top: 5%; margin-bottom: 5%;">Highlight Points of Walk:</h6>
+                        <input type="highlight" id="highlight" class="form-control" placeholder="Please be as specific as possible." style="width: 98%;height: 50px;">
+                        <button type="submit2" style="color:white; background-color: black;border-radius: 5%; border: black; width: 98%; height: 40px; margin-top: 3%;">Submit</button>
+                      </form>
+                </div>
+            </div>
+            </div>
+        </div> 
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                    <span class="close" id="close3">&times;</span>
+                    <h5 style="line-height: 64px; margin-top: 5%; text-align: center; margin-bottom: 10%;">Contact Author</h5>
+                    <p style="margin-bottom: 5%;margin-left: 5%; margin-right: 5%;margin-top: -5%;">
+                        A project by R.Linzy.Lin in Parsons School of Design :D
+                        <br>
+                        <br>
+                        -- Contact me via email: <a href="mailto:linruotong0@gmail.com" style="color: #e65d2f;">linruotong0@gmail.com</a>.
+                        <br>
+                        -- You are also welcomed to follow my Instagram: <a href="https://www.instagram.com/rlinzy.lin/">rlinzy.lin</a> :>
+                        <br>
+                        -- Feel free to contact me for any problems!
+                        <br>
+                        <br>
+                        <img src="img/cat.jpg" alt="cat" style="height: 20vb; display:block; margin-left: auto; margin-right: auto;">
+                    </p>
+            </div>
+        </div> 
+    </div>
+    <script>
+        document.getElementById("qaBtn1").addEventListener("click", function () {document.getElementById("popup1").style.display = "block";});
+        document.getElementById("qaBtn2").addEventListener("click", function () {document.getElementById("popup2").style.display = "block";});
+        document.getElementById("qaBtn3").addEventListener("click", function () {document.getElementById("popup3").style.display = "block";});
+        document.getElementById("close1").addEventListener("click", function () {document.getElementById("popup1").style.display = "none";});
+        document.getElementById("close2").addEventListener("click", function () {document.getElementById("popup2").style.display = "none";});
+        document.getElementById("close3").addEventListener("click", function () {document.getElementById("popup3").style.display = "none";});
+        let problemForm = document.getElementById("problemForm");
+
+problemForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let person = document.getElementById("person");
+  let problem = document.getElementById("problem");
+
+  if (person.value == "" || problem.value == "") {
+    alert("Ensure you fill out both fields!");
+  } else {
+    alert("This form has been successfully submitted!");
+    console.log(
+      `This form has a person of ${person.value} and problem of ${problem.value}`
+    );
+
+    person.value = "";
+    problem.value = "";
+  }
+});
+
+let suggestForm = document.getElementById("suggestForm");
+
+suggestForm.addEventListener("submit2", (e) => {
+  e.preventDefault();
+
+  let person = document.getElementById("person");
+  let location = document.getElementById("location");
+  let highlight = document.getElementById("highlight");
+
+  if (person.value == "" || location.value == "" || highlight.value == "") {
+    alert("Ensure you fill out both fields!");
+  } else {
+    alert("This form has been successfully submitted!");
+    console.log(
+      `This form has a person of ${person.value}, a location of ${location.value}, and highlight of ${highlight.value}`
+    );
+
+    person.value = "";
+    location.value = "";
+    highlight.value = "";
+  }
+});
+
+</script>
+</body>
+</html>
